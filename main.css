@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  display: flex;
+  width: 660px;
+  height: 480px;
+  margin: 150px auto 0;
+  background-image: url("./images/mashaimedved.png");
+  background-repeat: no-repeat;
+  background-size: 660px 480px;
+  perspective: 1500px;
+  transform-origin: left center;
+}
+
+.item {
+  width: 330px;
+  height: 480px;
+  border: 1px solid #fff;
+  background-image: url("./images/wood.png");
+  background-repeat: no-repeat;
+  background-size: 420px 480px;
+  transition: transform 0.5s linear;
+  transform-origin: left center;
+}
+
+.item:nth-child(2) {
+  transform-origin: right center;
+}
+
+.box:hover .item:first-child {
+  transform: rotateY(-120deg);
+}
+
+.box:hover .item {
+  transform: rotateY(120deg);
+}
